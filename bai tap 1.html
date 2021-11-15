@@ -21,29 +21,29 @@
 </body>
 <script>
     function phepcong() {
-    let so1 = document.getElementById("so1").value;
-    let so2 = document.getElementById("so2").value;
+    let so1 = parseInt(document.getElementById("so1").value);
+    let so2 = parseInt(document.getElementById("so2").value);
     let c = document.getElementById("ketqua").innerHTML;
-        c = so1 += so2
+        c = so1 + so2
         document.getElementById("ketqua").innerHTML= "Result Division: " + c
     }
     function pheptru() {
-    let so1 = document.getElementById("so1").value;
-    let so2 = document.getElementById("so2").value;
+        let so1 = parseInt(document.getElementById("so1").value);
+    let so2 = parseInt(document.getElementById("so2").value);
     let c = document.getElementById("ketqua").innerHTML;
         c = so1 -= so2
         document.getElementById("ketqua").innerHTML= "Result Division: " + c
     }
     function phepnhan() {
-    let so1 = document.getElementById("so1").value;
-    let so2 = document.getElementById("so2").value;
+        let so1 = parseInt(document.getElementById("so1").value);
+    let so2 = parseInt(document.getElementById("so2").value);
     let c = document.getElementById("ketqua").innerHTML;
         c = so1 * so2
         document.getElementById("ketqua").innerHTML= "Result Division: " + c
     }
     function phepchia() {
-    let so1 = document.getElementById("so1").value;
-    let so2 = document.getElementById("so2").value;
+    let so1 = parseInt(document.getElementById("so1").value);
+    let so2 = parseInt(document.getElementById("so2").value);
     let c = document.getElementById("ketqua").innerHTML;
         c = so1 / so2
         document.getElementById("ketqua").innerHTML= "Result Division: " + c
