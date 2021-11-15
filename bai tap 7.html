@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="hoaqua">
+    <button onclick="thaotac()">Xem giá</button>
+    <br>
+   <input type="text" name="" id="hienthi">
+</body>
+<script>
+function thaotac() {
+    let a = document.getElementById("hoaqua").value;
+    let b = document.getElementById("hienthi").value;
+    switch (a) {
+        case "oi":
+        b= "20000VND"
+       break;
+       case "cam":
+       b= "30000VND"
+       break;
+    }   
+    document.getElementById("hienthi").value = b;
+}
+</script>
+</html>

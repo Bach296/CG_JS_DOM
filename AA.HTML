@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="test.js"></script>
+</head>
+<body>
+    <input id="input" type="text" placeholder="Ten hoa qua can check gia" />
+    <button onclick="show_gia()">Check gia</button>
+    <h3 id="gia"></h3>
+    <script>
+        function show_gia(){
+            let name = document.getElementById("input").value;
+            let gia = 0;
+            switch(name){
+                case "Buoi":
+                    gia = "10000 VND/kg";
+                case "Cam":
+                    gia = "5000 VND/kg";
+            }
+            document.getElementById("gia").innerHTML = gia;
+        }   
+    </script>
+</body>
+</html>
