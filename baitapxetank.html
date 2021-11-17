@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="position: relative;">
+    <img id="tank" src="tank-up.png" alt="" width="50px" style="position: absolute; left: 100px; top:100px">
+    <img id="star" src="star.png" alt="" width="50px" style="position: absolute; left: 100px; top:100px">
+</body>
+<script>
+    window.addEventListener("keydown", movetank)
+    function movetank (event) {
+        let tank = document.getElementById("tank");
+        let x = parseInt(tank.style.left);
+        let y = parseInt(tank.style.top);
+        switch (event.key) {
+            case "d":
+                x= x + 10;
+                tank.style.left = x + "px";
+                tank.src = "tank-right.png";
+                break;
+                case "a":
+                x= x - 10;
+                tank.src = "tank-left.png";
+                tank.style.left = x + "px";
+                break;
+                case "w":
+                y= y - 10;
+                tank.src = "tank-up.png";
+                tank.style.top = y + "px";
+                break;
+                case "s":
+                y= y + 10;
+                tank.src = "tank-down.png";
+                tank.style.top = y + "px";
+                break;
+        }
+    }
+    function showstar() {
+        let x = Math.floor(Math.random()*750);
+        let y = Math.floor(Math.random()*350);
+        let star = document.getElementById("star");
+        star.style.left = x + "px";
+        star.style.top = y + "px";
+    }
+    showstar();
+
+    function checkvacham() {
+        let tank = document.getElementById("tank");
+        let star = document.getElementById("star");
+        let size = 50;
+
+        let x1 = parseInt(tank.style.left);
+        let y1 = parseInt(tank.style.top);
+        let x2 = parseInt(tank.style.left);
+        let y2 = parseInt(tank.style.top);
+    }
+</script>
+</html>

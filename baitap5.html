@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập chiều cao</p>
+    <input type="text" id="height">
+    <p>Nhập câng nặng</p>
+    <input type="text" id="weight">
+    <br>
+    <button style="margin-top: 10px;" id="tinhtoan" onclick="tinhtoan()">Tính</button>
+    <p id="ketluan">Kết luận: </p>
+</body>
+<script>
+    function tinhtoan() {
+        let cao = document.getElementById("height").value;
+        let nang = document.getElementById("weight").value;
+        let ketqua = nang / (cao * cao);
+        let ketluan = document.getElementById("ketluan").value;
+        if(ketqua < 18.5){
+            ketluan = "Kết luận: Gầy";
+        }else if(18.5 <= ketqua && ketqua < 25){
+            ketluan = "Kết luận: Cân đối";
+        }else{
+            ketluan = "Kết luận: Béo phì"
+        }
+        document.getElementById("ketluan").innerHTML = ketluan;
+    }
+    console.log(tinhtoan());
+</script>
+</html>
